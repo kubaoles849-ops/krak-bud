@@ -1,1 +1,229 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Realizacje | Krak-Bud</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .gallery-page {
+            padding: 150px 7% 100px;
+        }
+
+        .gallery-header {
+            max-width: 700px;
+            margin-bottom: 70px;
+        }
+
+        .gallery-header h1 {
+            font-size: clamp(45px, 7vw, 80px);
+            line-height: 1;
+            letter-spacing: -3px;
+            margin-bottom: 25px;
+        }
+
+        .gallery-header p {
+            color: #999;
+            max-width: 550px;
+        }
+
+        .gallery-section {
+            margin-bottom: 100px;
+            scroll-margin-top: 40px;
+        }
+
+        .gallery-section h2 {
+            font-size: 38px;
+            margin-bottom: 25px;
+        }
+
+        .gallery-section > p {
+            color: #999;
+            margin-bottom: 30px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            transition: .5s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.02);
+        }
+
+        .back {
+            display: inline-block;
+            margin-bottom: 40px;
+            color: #aaa;
+        }
+
+        .back:hover {
+            color: white;
+        }
+
+        @media (max-width: 800px) {
+            .gallery-page {
+                padding: 110px 5% 70px;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery img {
+                height: 300px;
+            }
+
+            .gallery-section {
+                margin-bottom: 70px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="logo">KRAK<span>-BUD</span></a>
+
+    <nav>
+        <a href="index.html">Strona główna</a>
+        <a href="index.html#uslugi">Usługi</a>
+        <a href="index.html#kontakt">Kontakt</a>
+    </nav>
+</header>
+
+<main class="gallery-page">
+
+    <a href="index.html" class="back">← Wróć na stronę główną</a>
+
+    <div class="gallery-header">
+        <p class="small-title">NASZE PRACE</p>
+
+        <h1>Realizacje</h1>
+
+        <p>
+            Przykładowe zdjęcia pokazujące efekt końcowy
+            naszych projektów.
+        </p>
+    </div>
+
+
+    <section id="lazienki" class="gallery-section">
+
+        <p class="small-title">01</p>
+
+        <h2>Łazienki</h2>
+
+        <p>
+            Nowoczesne łazienki wykonane z dbałością
+            o każdy detal.
+        </p>
+
+        <div class="gallery">
+
+            <img
+                src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1000&q=80"
+                alt="Nowoczesna łazienka"
+            >
+
+            <img
+                src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1000&q=80"
+                alt="Jasna łazienka"
+            >
+
+            <img
+                src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=80"
+                alt="Elegancka łazienka"
+            >
+
+        </div>
+
+    </section>
+
+
+    <section id="kuchnie" class="gallery-section">
+
+        <p class="small-title">02</p>
+
+        <h2>Kuchnie</h2>
+
+        <p>
+            Funkcjonalne i nowoczesne kuchnie
+            dopasowane do wnętrza.
+        </p>
+
+        <div class="gallery">
+
+            <img
+                src="https://images.unsplash.com/photo-1556912167-f556f1f39fdf?auto=format&fit=crop&w=1000&q=80"
+                alt="Nowoczesna kuchnia"
+            >
+
+            <img
+                src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=80"
+                alt="Kuchnia z wyspą"
+            >
+
+            <img
+                src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1000&q=80"
+                alt="Jasna kuchnia"
+            >
+
+        </div>
+
+    </section>
+
+
+    <section id="mieszkania" class="gallery-section">
+
+        <p class="small-title">03</p>
+
+        <h2>Mieszkania</h2>
+
+        <p>
+            Kompleksowe wykończenia wnętrz
+            i modernizacje mieszkań.
+        </p>
+
+        <div class="gallery">
+
+            <img
+                src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=80"
+                alt="Nowoczesne mieszkanie"
+            >
+
+            <img
+                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=80"
+                alt="Salon"
+            >
+
+            <img
+                src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=80"
+                alt="Nowoczesne wnętrze"
+            >
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <strong>KRAK-BUD</strong>
+    <span>© 2026 Krak-Bud</span>
+</footer>
+
+</body>
+</html>
