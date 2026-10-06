@@ -1,66 +1,373 @@
-style.cssbody {
+* {
+    box-sizing: border-box;
     margin: 0;
-    font-family: Arial, sans-serif;
-    color: #222;
+    padding: 0;
 }
 
-header {
-    padding: 100px 20px;
-    text-align: center;
-    background: #222;
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
     color: white;
 }
 
-header h1 {
-    font-size: 50px;
-    margin-bottom: 10px;
-}
 
-header a {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 15px 25px;
-    background: white;
-    color: #222;
-    text-decoration: none;
-    border-radius: 5px;
-}
+/* MENU */
 
-section {
-    max-width: 1000px;
-    margin: auto;
-    padding: 70px 20px;
-}
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 
-h2 {
-    font-size: 32px;
-}
-
-.uslugi {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 30px 7%;
+
+    z-index: 10;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo span {
+    opacity: 0.5;
+}
+
+.menu {
+    display: flex;
+    gap: 35px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 120px 7%;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.65),
+            rgba(0,0,0,0.8)
+        ),
+        url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2000&q=80");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.small-title,
+.section-title {
+    font-size: 13px;
+    letter-spacing: 3px;
+    opacity: 0.6;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 8vw, 110px);
+    line-height: 0.95;
+    margin-bottom: 30px;
+}
+
+.hero h1 span {
+    opacity: 0.55;
+}
+
+.hero-text {
+    font-size: 20px;
+    max-width: 500px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.button {
+    display: inline-block;
+
+    padding: 17px 30px;
+
+    background: white;
+    color: #111;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+}
+
+
+/* O NAS */
+
+.about {
+    background: #f1f1f1;
+    color: #111;
+
+    padding: 120px 7%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+.about h2,
+.services h2,
+.projects h2,
+.contact h2 {
+    font-size: clamp(40px, 5vw, 70px);
+    line-height: 1;
+}
+
+.about-text {
+    font-size: 19px;
+    line-height: 1.7;
+}
+
+.about-text p {
+    margin-bottom: 25px;
+}
+
+
+/* USŁUGI */
+
+.services {
+    padding: 120px 7%;
+    background: #111;
+}
+
+.services h2 {
+    margin-bottom: 70px;
+}
+
+.services-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 1px;
+
+    background: #333;
+}
+
+.service {
+    padding: 50px;
+
+    background: #111;
+
+    min-height: 250px;
+}
+
+.service span {
+    opacity: 0.4;
+}
+
+.service h3 {
+    font-size: 28px;
+    margin: 35px 0 15px;
+}
+
+.service p {
+    opacity: 0.6;
+    line-height: 1.6;
+}
+
+
+/* REALIZACJE */
+
+.projects {
+    padding: 120px 7%;
+    background: #f1f1f1;
+    color: #111;
+}
+
+.projects h2 {
+    margin-bottom: 60px;
+}
+
+.projects-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
     gap: 20px;
 }
 
-.uslugi div {
-    flex: 1;
-    padding: 25px;
-    background: #f2f2f2;
-    border-radius: 10px;
-}
+.project {
+    height: 450px;
 
-footer {
+    display: flex;
+    align-items: flex-end;
+
     padding: 30px;
-    text-align: center;
-    background: #222;
+
+    background-size: cover;
+    background-position: center;
+
     color: white;
 }
 
+.project-one {
+    background-image:
+        linear-gradient(transparent, rgba(0,0,0,0.8)),
+        url("https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=80");
+}
+
+.project-two {
+    background-image:
+        linear-gradient(transparent, rgba(0,0,0,0.8)),
+        url("https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=80");
+}
+
+.project-three {
+    background-image:
+        linear-gradient(transparent, rgba(0,0,0,0.8)),
+        url("https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1000&q=80");
+}
+
+.project span {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.project h3 {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+
+/* KONTAKT */
+
+.contact {
+    padding: 140px 7%;
+
+    background: #111;
+}
+
+.contact h2 {
+    margin-bottom: 30px;
+}
+
+.contact > p:not(.section-title) {
+    opacity: 0.6;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.contact-info {
+    display: flex;
+    gap: 40px;
+
+    margin-top: 50px;
+}
+
+.contact-info a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+/* STOPKA */
+
+footer {
+    padding: 40px 7%;
+
+    border-top: 1px solid #333;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    opacity: 0.4;
+    font-size: 13px;
+}
+
+
+/* TELEFON */
+
 @media (max-width: 700px) {
-    .uslugi {
-        flex-direction: column;
+
+    nav {
+        padding: 25px;
     }
 
-    header h1 {
-        font-size: 38px;
+    .menu {
+        display: none;
+    }
+
+    .hero {
+        padding: 120px 25px 80px;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        padding: 80px 25px;
+    }
+
+    .services {
+        padding: 80px 25px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service {
+        padding: 35px;
+    }
+
+    .projects {
+        padding: 80px 25px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project {
+        height: 350px;
+    }
+
+    .contact {
+        padding: 80px 25px;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
     }
 }
