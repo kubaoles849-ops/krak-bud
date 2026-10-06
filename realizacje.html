@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -9,84 +10,252 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-        .gallery-page {
-            padding: 150px 7% 100px;
+        .realizacje-page {
+            padding: 120px 8% 80px;
+            background: #0d0d0d;
+            min-height: 100vh;
         }
 
-        .gallery-header {
+        .realizacje-header {
+            text-align: center;
             max-width: 700px;
-            margin-bottom: 70px;
+            margin: 0 auto 70px;
         }
 
-        .gallery-header h1 {
-            font-size: clamp(45px, 7vw, 80px);
-            line-height: 1;
-            letter-spacing: -3px;
-            margin-bottom: 25px;
+        .realizacje-header span {
+            color: #f5b400;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
-        .gallery-header p {
-            color: #999;
-            max-width: 550px;
-        }
-
-        .gallery-section {
-            margin-bottom: 100px;
-            scroll-margin-top: 40px;
-        }
-
-        .gallery-section h2 {
-            font-size: 38px;
-            margin-bottom: 25px;
-        }
-
-        .gallery-section > p {
-            color: #999;
-            margin-bottom: 30px;
-        }
-
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-        }
-
-        .gallery img {
-            width: 100%;
-            height: 350px;
-            object-fit: cover;
-            transition: .5s;
-        }
-
-        .gallery img:hover {
-            transform: scale(1.02);
-        }
-
-        .back {
-            display: inline-block;
-            margin-bottom: 40px;
-            color: #aaa;
-        }
-
-        .back:hover {
+        .realizacje-header h1 {
+            font-size: clamp(40px, 6vw, 70px);
+            margin: 15px 0;
             color: white;
         }
 
-        @media (max-width: 800px) {
-            .gallery-page {
-                padding: 110px 5% 70px;
+        .realizacje-header p {
+            color: #aaa;
+            font-size: 18px;
+        }
+
+        .realizacja {
+            max-width: 1100px;
+            margin: 0 auto 100px;
+        }
+
+        .realizacja-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .realizacja-title h2 {
+            color: white;
+            font-size: 32px;
+            margin: 0;
+        }
+
+        .realizacja-title span {
+            color: #f5b400;
+            font-weight: 600;
+        }
+
+        /* SUWAK */
+
+        .comparison {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            border-radius: 20px;
+            user-select: none;
+            touch-action: none;
+            cursor: ew-resize;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+        }
+
+        .comparison img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            pointer-events: none;
+        }
+
+        .comparison .before {
+            position: absolute;
+            inset: 0;
+            width: 50%;
+            overflow: hidden;
+            z-index: 2;
+        }
+
+        .comparison .before img {
+            width: 100%;
+            max-width: none;
+        }
+
+        .comparison-label {
+            position: absolute;
+            top: 20px;
+            padding: 9px 15px;
+            border-radius: 8px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            z-index: 5;
+            pointer-events: none;
+        }
+
+        .label-before {
+            left: 20px;
+        }
+
+        .label-after {
+            right: 20px;
+            background: #f5b400;
+            color: #111;
+        }
+
+        /* LINIA */
+
+        .slider-line {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 3px;
+            background: white;
+            z-index: 10;
+            transform: translateX(-50%);
+            pointer-events: none;
+        }
+
+        .slider-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            background: #f5b400;
+            border: 4px solid white;
+            transform: translate(-50%, -50%);
+            z-index: 11;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: #111;
+            font-size: 20px;
+            font-weight: 900;
+
+            box-shadow: 0 5px 25px rgba(0,0,0,0.4);
+            pointer-events: none;
+        }
+
+        .slider-button::before {
+            content: "‹";
+            margin-right: 3px;
+        }
+
+        .slider-button::after {
+            content: "›";
+            margin-left: 3px;
+        }
+
+        .hint {
+            text-align: center;
+            margin-top: 14px;
+            color: #777;
+            font-size: 14px;
+        }
+
+        .back-button {
+            display: block;
+            width: fit-content;
+            margin: 20px auto 0;
+            padding: 14px 24px;
+            border: 1px solid #f5b400;
+            border-radius: 10px;
+            color: #f5b400;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .back-button:hover {
+            background: #f5b400;
+            color: #111;
+        }
+
+        /* TELEFON */
+
+        @media (max-width: 700px) {
+
+            .realizacje-page {
+                padding: 100px 18px 60px;
             }
 
-            .gallery {
-                grid-template-columns: 1fr;
+            .realizacje-header {
+                margin-bottom: 50px;
             }
 
-            .gallery img {
-                height: 300px;
+            .realizacje-header h1 {
+                font-size: 42px;
             }
 
-            .gallery-section {
-                margin-bottom: 70px;
+            .realizacje-header p {
+                font-size: 16px;
+            }
+
+            .realizacja {
+                margin-bottom: 65px;
+            }
+
+            .realizacja-title {
+                display: block;
+                margin-bottom: 18px;
+            }
+
+            .realizacja-title h2 {
+                font-size: 27px;
+                margin-bottom: 7px;
+            }
+
+            .comparison {
+                aspect-ratio: 4 / 3;
+                border-radius: 14px;
+            }
+
+            .comparison-label {
+                top: 12px;
+                padding: 7px 10px;
+                font-size: 10px;
+            }
+
+            .label-before {
+                left: 12px;
+            }
+
+            .label-after {
+                right: 12px;
+            }
+
+            .slider-button {
+                width: 48px;
+                height: 48px;
+            }
+
+            .hint {
+                font-size: 13px;
             }
         }
     </style>
@@ -94,136 +263,181 @@
 
 <body>
 
-<header class="navbar">
-    <a href="index.html" class="logo">KRAK<span>-BUD</span></a>
+<section class="realizacje-page">
 
-    <nav>
-        <a href="index.html">Strona główna</a>
-        <a href="index.html#uslugi">Usługi</a>
-        <a href="index.html#kontakt">Kontakt</a>
-    </nav>
-</header>
+    <div class="realizacje-header">
+        <span>Nasze realizacje</span>
 
-<main class="gallery-page">
-
-    <a href="index.html" class="back">← Wróć na stronę główną</a>
-
-    <div class="gallery-header">
-        <p class="small-title">NASZE PRACE</p>
-
-        <h1>Realizacje</h1>
+        <h1>Przed → Po</h1>
 
         <p>
-            Przykładowe zdjęcia pokazujące efekt końcowy
-            naszych projektów.
+            Przesuń linię i zobacz różnicę.
+            Tak zmieniamy wnętrza od podstaw.
         </p>
     </div>
 
 
-    <section id="lazienki" class="gallery-section">
+    <!-- ŁAZIENKA -->
 
-        <p class="small-title">01</p>
+    <div class="realizacja">
 
-        <h2>Łazienki</h2>
+        <div class="realizacja-title">
+            <h2>Łazienka</h2>
+            <span>Remont kompleksowy</span>
+        </div>
 
-        <p>
-            Nowoczesne łazienki wykonane z dbałością
-            o każdy detal.
-        </p>
+        <div class="comparison">
 
-        <div class="gallery">
-
+            <!-- PO -->
             <img
-                src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1000&q=80"
-                alt="Nowoczesna łazienka"
-            >
+                src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=85"
+                alt="Łazienka po remoncie">
 
-            <img
-                src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1000&q=80"
-                alt="Jasna łazienka"
-            >
+            <!-- PRZED -->
+            <div class="before">
+                <img
+                    src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1600&q=85"
+                    alt="Łazienka przed remontem">
+            </div>
 
-            <img
-                src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=80"
-                alt="Elegancka łazienka"
-            >
+            <span class="comparison-label label-before">PRZED</span>
+            <span class="comparison-label label-after">PO</span>
+
+            <div class="slider-line"></div>
+            <div class="slider-button"></div>
 
         </div>
 
-    </section>
+        <div class="hint">
+            ← Przeciągnij palcem lub myszką →
+        </div>
+
+    </div>
 
 
-    <section id="kuchnie" class="gallery-section">
+    <!-- KUCHNIA -->
 
-        <p class="small-title">02</p>
+    <div class="realizacja">
 
-        <h2>Kuchnie</h2>
+        <div class="realizacja-title">
+            <h2>Kuchnia</h2>
+            <span>Modernizacja wnętrza</span>
+        </div>
 
-        <p>
-            Funkcjonalne i nowoczesne kuchnie
-            dopasowane do wnętrza.
-        </p>
-
-        <div class="gallery">
-
-            <img
-                src="https://images.unsplash.com/photo-1556912167-f556f1f39fdf?auto=format&fit=crop&w=1000&q=80"
-                alt="Nowoczesna kuchnia"
-            >
+        <div class="comparison">
 
             <img
-                src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=80"
-                alt="Kuchnia z wyspą"
-            >
+                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=85"
+                alt="Kuchnia po remoncie">
 
-            <img
-                src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1000&q=80"
-                alt="Jasna kuchnia"
-            >
+            <div class="before">
+                <img
+                    src="https://images.unsplash.com/photo-1556912173-3bb406ef7e77?auto=format&fit=crop&w=1600&q=85"
+                    alt="Kuchnia przed remontem">
+            </div>
+
+            <span class="comparison-label label-before">PRZED</span>
+            <span class="comparison-label label-after">PO</span>
+
+            <div class="slider-line"></div>
+            <div class="slider-button"></div>
 
         </div>
 
-    </section>
+        <div class="hint">
+            ← Przeciągnij palcem lub myszką →
+        </div>
+
+    </div>
 
 
-    <section id="mieszkania" class="gallery-section">
+    <!-- MIESZKANIE -->
 
-        <p class="small-title">03</p>
+    <div class="realizacja">
 
-        <h2>Mieszkania</h2>
+        <div class="realizacja-title">
+            <h2>Mieszkanie</h2>
+            <span>Remont całego wnętrza</span>
+        </div>
 
-        <p>
-            Kompleksowe wykończenia wnętrz
-            i modernizacje mieszkań.
-        </p>
-
-        <div class="gallery">
-
-            <img
-                src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=80"
-                alt="Nowoczesne mieszkanie"
-            >
+        <div class="comparison">
 
             <img
-                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=80"
-                alt="Salon"
-            >
+                src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=85"
+                alt="Mieszkanie po remoncie">
 
-            <img
-                src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=80"
-                alt="Nowoczesne wnętrze"
-            >
+            <div class="before">
+                <img
+                    src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=85"
+                    alt="Mieszkanie przed remontem">
+            </div>
+
+            <span class="comparison-label label-before">PRZED</span>
+            <span class="comparison-label label-after">PO</span>
+
+            <div class="slider-line"></div>
+            <div class="slider-button"></div>
 
         </div>
 
-    </section>
+        <div class="hint">
+            ← Przeciągnij palcem lub myszką →
+        </div>
 
-</main>
+    </div>
 
-<footer>
-    <strong>KRAK-BUD</strong>
-    <span>© 2026 Krak-Bud</span>
-</footer>
+
+    <a href="index.html" class="back-button">
+        ← Wróć na stronę główną
+    </a>
+
+</section>
+
+
+<script>
+    document.querySelectorAll(".comparison").forEach(comparison => {
+
+        const before = comparison.querySelector(".before");
+        const line = comparison.querySelector(".slider-line");
+        const button = comparison.querySelector(".slider-button");
+
+        let dragging = false;
+
+        function moveSlider(clientX) {
+
+            const rect = comparison.getBoundingClientRect();
+
+            let position = ((clientX - rect.left) / rect.width) * 100;
+
+            position = Math.max(0, Math.min(100, position));
+
+            before.style.width = position + "%";
+            line.style.left = position + "%";
+            button.style.left = position + "%";
+        }
+
+        comparison.addEventListener("pointerdown", event => {
+            dragging = true;
+            comparison.setPointerCapture(event.pointerId);
+            moveSlider(event.clientX);
+        });
+
+        comparison.addEventListener("pointermove", event => {
+            if (!dragging) return;
+            moveSlider(event.clientX);
+        });
+
+        comparison.addEventListener("pointerup", () => {
+            dragging = false;
+        });
+
+        comparison.addEventListener("pointercancel", () => {
+            dragging = false;
+        });
+
+    });
+</script>
 
 </body>
 </html>
+```
