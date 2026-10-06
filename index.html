@@ -3,209 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Krak-Bud | Remonty i wykończenia</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- MENU -->
+<header class="navbar">
+    <a href="index.html" class="logo">KRAK<span>-BUD</span></a>
+
     <nav>
-        <div class="logo">KRAK<span>-BUD</span></div>
-
-        <div class="menu">
-            <a href="#o-nas">O nas</a>
-            <a href="#uslugi">Usługi</a>
-            <a href="#realizacje">Realizacje</a>
-            <a href="#kontakt">Kontakt</a>
-        </div>
+        <a href="#o-nas">O nas</a>
+        <a href="#uslugi">Usługi</a>
+        <a href="#realizacje">Realizacje</a>
+        <a href="#kontakt">Kontakt</a>
     </nav>
+</header>
 
+<main>
 
-    <!-- HERO -->
-    <header class="hero">
+<section class="hero">
+    <div class="hero-content">
+        <p class="small-title">REMONTY • WYKOŃCZENIA • MODERNIZACJE</p>
 
-        <div class="hero-content">
+        <h1>Twój remont.<br><span>Nasza praca.</span></h1>
 
-            <p class="small-title">REMONTY • WYKOŃCZENIA • KRAKÓW</p>
+        <p>
+            Kompleksowe remonty mieszkań, domów i lokali.
+            Od pierwszego pomysłu aż po ostatnie wykończenie.
+        </p>
 
-            <h1>
-                Twój remont.<br>
-                <span>Nasza praca.</span>
-            </h1>
+        <a href="#realizacje" class="button">Zobacz nasze realizacje</a>
+    </div>
+</section>
 
-            <p class="hero-text">
-                Kompleksowe remonty mieszkań i domów
-                w Krakowie i okolicach.
-            </p>
+<section id="o-nas" class="section about">
+    <div>
+        <p class="small-title">KRAK-BUD</p>
+        <h2>Budujemy przestrzeń,<br> w której chce się żyć.</h2>
+    </div>
 
-            <a class="button" href="#kontakt">
-                Poproś o wycenę
-            </a>
+    <p>
+        Zajmujemy się remontami i wykończeniami wnętrz.
+        Stawiamy na dokładność, estetykę i solidne wykonanie.
+        Każdy projekt traktujemy indywidualnie.
+    </p>
+</section>
 
+<section id="uslugi" class="section">
+    <p class="small-title">CO ROBIMY</p>
+    <h2>Nasze usługi</h2>
+
+    <div class="services">
+        <div class="service-card">
+            <span>01</span>
+            <h3>Łazienki</h3>
+            <p>Kompleksowe remonty i wykończenia łazienek.</p>
         </div>
 
-    </header>
+        <div class="service-card">
+            <span>02</span>
+            <h3>Kuchnie</h3>
+            <p>Modernizacja i wykończenie kuchni od podstaw.</p>
+        </div>
 
+        <div class="service-card">
+            <span>03</span>
+            <h3>Mieszkania</h3>
+            <p>Kompleksowe remonty mieszkań i domów.</p>
+        </div>
 
-    <!-- O NAS -->
-    <section id="o-nas" class="about">
+        <div class="service-card">
+            <span>04</span>
+            <h3>Wykończenia</h3>
+            <p>Podłogi, ściany, malowanie i prace wykończeniowe.</p>
+        </div>
+    </div>
+</section>
 
+<section id="realizacje" class="section realizacje">
+    <div class="section-heading">
         <div>
-
-            <p class="section-title">O NAS</p>
-
-            <h2>
-                Remont bez<br>
-                niepotrzebnych problemów.
-            </h2>
-
+            <p class="small-title">NASZE PRACE</p>
+            <h2>Realizacje</h2>
         </div>
 
-        <div class="about-text">
+        <p>
+            Zobacz przykładowe projekty i sposób,
+            w jaki pracujemy.
+        </p>
+    </div>
 
-            <p>
-                Krak-Bud to firma zajmująca się remontami
-                i wykończeniami wnętrz.
-            </p>
+    <div class="projects">
 
-            <p>
-                Stawiamy na dokładność, terminowość
-                i dobry kontakt z klientem.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- USŁUGI -->
-    <section id="uslugi" class="services">
-
-        <p class="section-title">CO ROBIMY</p>
-
-        <h2>Nasze usługi</h2>
-
-        <div class="services-grid">
-
-            <div class="service">
-                <span>01</span>
-                <h3>Remonty mieszkań</h3>
-                <p>
-                    Kompleksowe remonty mieszkań
-                    od początku do końca.
-                </p>
-            </div>
-
-            <div class="service">
-                <span>02</span>
+        <a href="realizacje.html#lazienki" class="project project-large">
+            <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1200&q=80" alt="Nowoczesna łazienka">
+            <div class="project-overlay">
+                <p>01</p>
                 <h3>Łazienki</h3>
-                <p>
-                    Wykończenie i remont łazienek
-                    dopasowany do Twoich potrzeb.
-                </p>
+                <span>Zobacz realizacje →</span>
             </div>
+        </a>
 
-            <div class="service">
-                <span>03</span>
-                <h3>Malowanie</h3>
-                <p>
-                    Malowanie ścian, sufitów
-                    i przygotowanie powierzchni.
-                </p>
+        <a href="realizacje.html#kuchnie" class="project">
+            <img src="https://images.unsplash.com/photo-1556912167-f556f1f39fdf?auto=format&fit=crop&w=1000&q=80" alt="Nowoczesna kuchnia">
+            <div class="project-overlay">
+                <p>02</p>
+                <h3>Kuchnie</h3>
+                <span>Zobacz realizacje →</span>
             </div>
+        </a>
 
-            <div class="service">
-                <span>04</span>
-                <h3>Wykończenia</h3>
-                <p>
-                    Kompleksowe wykończenia
-                    mieszkań pod klucz.
-                </p>
+        <a href="realizacje.html#mieszkania" class="project">
+            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=80" alt="Nowoczesne wnętrze">
+            <div class="project-overlay">
+                <p>03</p>
+                <h3>Mieszkania</h3>
+                <span>Zobacz realizacje →</span>
             </div>
+        </a>
 
-        </div>
+    </div>
+</section>
 
-    </section>
+<section id="kontakt" class="contact">
+    <p class="small-title">POROZMAWIAJMY</p>
 
+    <h2>Masz remont<br>do zrobienia?</h2>
 
-    <!-- REALIZACJE -->
-    <section id="realizacje" class="projects">
+    <p>Napisz lub zadzwoń. Porozmawiamy o Twoim projekcie.</p>
 
-        <p class="section-title">NASZE REALIZACJE</p>
+    <a href="mailto:kontakt@krak-bud.pl" class="button button-light">
+        Napisz do nas
+    </a>
+</section>
 
-        <h2>Przykładowe projekty</h2>
+</main>
 
-        <div class="projects-grid">
+<footer>
+    <strong>KRAK-BUD</strong>
+    <span>© 2026 Krak-Bud</span>
+</footer>
 
-            <div class="project project-one">
-                <div>
-                    <span>MIESZKANIE</span>
-                    <h3>Nowoczesne wnętrze</h3>
-                </div>
-            </div>
+<script>
+const elements = document.querySelectorAll(
+    '.service-card, .project, .about, .section-heading'
+);
 
-            <div class="project project-two">
-                <div>
-                    <span>ŁAZIENKA</span>
-                    <h3>Remont łazienki</h3>
-                </div>
-            </div>
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+}, {
+    threshold: 0.12
+});
 
-            <div class="project project-three">
-                <div>
-                    <span>DOM</span>
-                    <h3>Wykończenie domu</h3>
-                </div>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- KONTAKT -->
-    <section id="kontakt" class="contact">
-
-        <p class="section-title">KONTAKT</p>
-
-        <h2>
-            Masz remont<br>
-            do zrobienia?
-        </h2>
-
-        <p>
-            Napisz lub zadzwoń — przygotujemy
-            bezpłatną wycenę.
-        </p>
-
-        <div class="contact-info">
-
-            <a href="tel:500000000">
-                📞 500 000 000
-            </a>
-
-            <a href="mailto:kontakt@krak-bud.pl">
-                ✉ kontakt@krak-bud.pl
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- STOPKA -->
-    <footer>
-
-        <div class="logo">KRAK<span>-BUD</span></div>
-
-        <p>
-            © 2026 Krak-Bud. Wszystkie prawa zastrzeżone.
-        </p>
-
-    </footer>
+elements.forEach(element => observer.observe(element));
+</script>
 
 </body>
 </html>
