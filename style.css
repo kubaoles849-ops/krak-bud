@@ -570,3 +570,121 @@ footer {
     }
 }
 ``` 
+```css
+/* =========================
+   DLACZEGO MY
+========================= */
+
+.why-us {
+    padding: 110px 8%;
+    background: #0d0d0d;
+}
+
+.why-header {
+    max-width: 750px;
+    margin-bottom: 60px;
+}
+
+.why-header span {
+    color: #f5b400;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.why-header h2 {
+    color: white;
+    font-size: clamp(40px, 5vw, 65px);
+    line-height: 1.05;
+    margin: 18px 0;
+}
+
+.why-header h2 strong {
+    color: #f5b400;
+}
+
+.why-header p {
+    color: #999;
+    max-width: 600px;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.why-grid {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.why-card {
+    padding: 30px;
+    background: #151515;
+    border: 1px solid #252525;
+    border-radius: 16px;
+
+    transition: 0.35s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-8px);
+    border-color: #f5b400;
+}
+
+.why-number {
+    color: #f5b400;
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 35px;
+}
+
+.why-card h3 {
+    color: white;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.why-card p {
+    color: #888;
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* TELEFON */
+
+@media (max-width: 900px) {
+
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .why-us {
+        padding: 80px 20px;
+    }
+
+    .why-header {
+        margin-bottom: 40px;
+    }
+
+    .why-header h2 {
+        font-size: 40px;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .why-card {
+        padding: 25px;
+    }
+
+}
+```
