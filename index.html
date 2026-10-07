@@ -126,17 +126,84 @@
     </div>
 </section>
 
-<section id="kontakt" class="contact">
-    <p class="small-title">POROZMAWIAJMY</p>
+```html
+<section class="contact" id="kontakt">
 
-    <h2>Masz remont<br>do zrobienia?</h2>
+    <div class="contact-container">
 
-    <p>Napisz lub zadzwoń. Porozmawiamy o Twoim projekcie.</p>
+        <div class="contact-info">
+            <span class="contact-small">SKONTAKTUJ SIĘ</span>
 
-    <a href="mailto:kontakt@krak-bud.pl" class="button button-light">
-        Napisz do nas
-    </a>
+            <h2>Masz remont?<br><strong>Zadzwoń do nas.</strong></h2>
+
+            <p>
+                Opowiedz nam o swoim projekcie.
+                Przygotujemy wycenę i ustalimy szczegóły realizacji.
+            </p>
+
+            <div class="contact-buttons">
+
+                <a href="tel:+48123456789" class="contact-button phone">
+                    📞 Zadzwoń
+                </a>
+
+                <a href="mailto:kontakt@krak-bud.pl" class="contact-button email">
+                    ✉️ Napisz e-mail
+                </a>
+
+            </div>
+        </div>
+
+
+        <div class="contact-form-box">
+
+            <h3>Napisz do nas</h3>
+
+            <form
+    id="contactForm"
+    action="https://formspree.io/f/xoejjlzl
+    method="POST"
+>
+
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Imię i nazwisko"
+                    required
+                >
+
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Twój e-mail"
+                    required
+                >
+
+                <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Numer telefonu"
+                >
+
+                <textarea
+                    name="message"
+                    rows="5"
+                    placeholder="Opisz krótko swój remont..."
+                    required
+                ></textarea>
+
+                <button type="submit">
+                    Wyślij wiadomość →
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
 </section>
+```
 
 </main>
 
